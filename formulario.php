@@ -35,7 +35,7 @@ try {
     $mail->CharSet = 'UTF-8';
     
     // Email mínimo
-    $mail->setFrom($email, 'Hack Test');
+    $mail->setFrom($email, 'Correo del sitio web Iniciativa Norte');
     $mail->addAddress($email);
     $mail->Subject = 'Tienes Correo';
     $mail->isHTML(true);
@@ -51,8 +51,9 @@ try {
     ';
     
     if ($mail->send()) {
-        echo json_encode('correcto', JSON_UNESCAPED_UNICODE);
-        // echo "<script>window.location='index.html'</script>";
+        // echo json_encode('correcto', JSON_UNESCAPED_UNICODE);
+        echo "<script>alert('Listo, tu información quedó registrada!')</script>";
+        echo "<script>window.location='index.html'</script>";
     } else {
         echo json_encode('error_envio', JSON_UNESCAPED_UNICODE);
     }
@@ -60,7 +61,7 @@ try {
 } catch (Exception $e) {
     // Solo una respuesta según el tipo de error
     if (strpos($e->getMessage(), 'authenticate') !== false) {
-        echo json_encode('Contraseña incorrecta', JSON_UNESCAPED_UNICODE);
+        // echo json_encode('Contraseña incorrecta', JSON_UNESCAPED_UNICODE);
     } else {
         echo json_encode('Error: ' . $e->getMessage(), JSON_UNESCAPED_UNICODE);
     }
