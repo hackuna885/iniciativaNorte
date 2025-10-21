@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
             delay: 0.3
         });
         
-        // About Card Animation
+        // Nosotros Animation
         gsap.to('.about-card', {
             opacity: 1,
             x: 0,
@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
             }
         });
         
-        // Service Cards
+        // servicios Cards
         gsap.utils.toArray('.service-card').forEach((card, i) => {
             gsap.to(card, {
                 opacity: 1,
@@ -36,7 +36,7 @@ gsap.registerPlugin(ScrollTrigger);
             });
         });
         
-        // Model Steps
+        // Modelo
         gsap.utils.toArray('.model-step').forEach((step, i) => {
             gsap.to(step, {
                 opacity: 1,
@@ -51,7 +51,7 @@ gsap.registerPlugin(ScrollTrigger);
             });
         });
         
-        // Sector Cards
+        // Diagnostico
         gsap.utils.toArray('.sector-card').forEach((card, i) => {
             gsap.to(card, {
                 opacity: 1,
@@ -66,7 +66,7 @@ gsap.registerPlugin(ScrollTrigger);
             });
         });
         
-        // CTA Animation
+        // img animacion card
         gsap.to('.cta-content', {
             opacity: 1,
             scale: 1,
@@ -78,7 +78,7 @@ gsap.registerPlugin(ScrollTrigger);
             }
         });
         
-        // Smooth scroll for anchor links
+        // Animación scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
